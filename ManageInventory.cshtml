@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Inventory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/CustomScripts/Inventory/InventoryIn.js"></script>
+<div class="right_col pb-4" role="main">
+    <div class="x_content">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Labeling Inventory Detail</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <form id="SavePackingRecordForm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Inventory Date</label>
+                            <input type="text" name="InventoryDate" id="InventoryDate" style="width:100%" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Store</label>
+                            <input type="text" name="StoreID" id="StoreID" style="width:100%" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Voucher</label>
+                            <input type="text" name="VoucherID" id="VoucherID" style="width:100%" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>General</label>
+                            <input type="text" name="GeneralID" id="GeneralID" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Type</label>
+                            <select class="form-control" id="Type" name="Type">
+                                <option value="0">-- Select Type --</option>
+                                <option value="">Sales</option>
+                                <option value="">Invoice</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Main Category</label>
+                            <input type="text" name="MainCategoryID" id="MainCategoryID" style="width:100%" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Item Name</label>
+                            <input type="text" name="ItemID" id="ItemID" style="width:100%"/>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Rate</label>
+                            <input type="number" class="form-control" name="Rate" id="Rate" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>QTY</label>
+                            <input type="number" class="form-control" name="QTY" id="QTY" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>UOM</label>
+                            <select class="form-control" id="UOM" name="UOM">
+                                <option value="0">-- Select UOM --</option>
+                                <option value="PCS">Pieces</option>
+                                <option value="Carton">Cartons</option>
+                                <option value="Box">Boxes</option>
+                                <option value="FT">Feet</option>
+                                <option value="INCH">Inches</option>
+                                <option value="KG">Kilogram</option>
+                                <option value="GRM">Gram</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Batch No.</label>
+                            <input type="text" class="form-control" name="BatchNo" id="BatchNo" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Issued To</label>
+                            <input type="text" name="DepartmentID" id="DepartmentID" style="width:100%"/>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Employee Name</label>
+                            <input type="text" name="EntityID" id="EntityID" style="width:100%"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Remarks</label>
+                            <textarea class="form-control" name="Remarks" id="Remarks" placeholder="Remarks"></textarea>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group col-md-12">
+                        <button type="button" class="btn btn-primary float-right" onclick="SaveInventory()">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
